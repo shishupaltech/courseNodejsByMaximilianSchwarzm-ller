@@ -11,3 +11,11 @@
 // |----------> Server at(10.212.212.12)---------------
 //                  |
 // nodejs,php,asp.net <your code><-----------------Databaseg
+
+// http, https 
+// hyper text transer protocol 
+// A protocol for transferring Data which is understood by browser and server 
+// Hyper text tranfer protocol secure 
+    // (Http + data encryption) (during Transation)
+
+    
