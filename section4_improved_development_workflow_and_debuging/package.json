@@ -1,0 +1,13 @@
+{
+  "name": "section4_improved_development_workflow_and_debuging",
+  "version": "1.0.0",
+  "description": "",
+  "main": "41_module_Introduction.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node 42_understanding_npm_script.js",
+    "start-server":"node app.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
