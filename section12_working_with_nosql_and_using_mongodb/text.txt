@@ -1,0 +1,10 @@
+what's in this modules 
+
+what is mongodb?
+-> mongoDB 
+    Humongous 
+    because it can store lots and lots of data 
+
+how it works 
+Data - shop 
+collection - users          orders 
