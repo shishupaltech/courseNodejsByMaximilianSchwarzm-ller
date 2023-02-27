@@ -52,40 +52,38 @@ exports.getIndex = (req, res, next) => {
 };
 
 exports.getCart = (req, res, next) => {
-  Cart.getCart(cart => {
-    Product.findAll().then(products=>{
-      const cartProducts = [];
-      for(product of products){
-        const cartProductData = cart.product.find(prod=>prod.id===product.id);
-        if(cartProducts){
-          cartProducts.push({ productData: product, qty: cartProductData.qty });
-        }
-      }
-      res.render('shop/cart', {
-        path: '/cart',
-        pageTitle: 'Your Cart',
-        products: cartProducts
-      });
-    }).catch(err=>{
-      console.log(err);
-    })
-    // Product.fetchAll(products => {
-    //   const cartProducts = [];
-    //   for (product of products) {
-    //     const cartProductData = cart.products.find(
-    //       prod => prod.id === product.id
-    //     );
-    //     if (cartProductData) {
-    //       cartProducts.push({ productData: product, qty: cartProductData.qty });
-    //     }
-    //   }
-    //   res.render('shop/cart', {
-    //     path: '/cart',
-    //     pageTitle: 'Your Cart',
-    //     products: cartProducts
-    //   });
-    // });
-  });
+  
+  req.user.getCart().then(cart=>{
+      return cart.getProducts().then(product=>{
+        res.render('shop/cart', {
+                path: '/cart',
+                pageTitle: 'Your Cart',
+                products:product
+              });
+      }).catch(err=>{
+        console.log(err);
+      })
+  }).catch(err=>{
+    console.log(err);
+  })
+  // Cart.getCart(cart => {
+  //   Product.fetchAll(products => {
+  //     const cartProducts = [];
+  //     for (product of products) {
+  //       const cartProductData = cart.products.find(
+  //         prod => prod.id === product.id
+  //       );
+  //       if (cartProductData) {
+  //         cartProducts.push({ productData: product, qty: cartProductData.qty });
+  //       }
+  //     }
+  //     res.render('shop/cart', {
+  //       path: '/cart',
+  //       pageTitle: 'Your Cart',
+  //       products: cartProducts
+  //     });
+  //   });
+  // });
 };
 
 exports.postCart = (req, res, next) => {
