@@ -1,0 +1,19 @@
+// what is sequelize 
+
+// An object-relational mapping library
+
+// user 
+// name age email password => mapped> users 
+//         id:1,name:max,age:28,password:'dsdg312'
+//     insert into users valuese(id,max,28,dsdg312) this is wrong now with another way 
+
+// const user = User.create({name:'Max',age:28,password:'dsdg312'})
+
+// core concept 
+// models -> e.g. User,Product 
+
+// instances = const user = User.build()
+
+// Queries => userInfo.findAll()
+
+// Associations = > userInfo={.hasMany(product)}
