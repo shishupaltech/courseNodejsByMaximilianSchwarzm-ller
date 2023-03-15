@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use((req, res, next) => {
   User.findById('6411703038907246b8fa9645')
     .then(user => {
-      req.user =user
+      req.user = user;
       next();
     })
     .catch(err => console.log(err));
@@ -37,19 +37,18 @@ mongoose
     'mongodb+srv://codeshishupal:68zBKcghjZb5W4dA@cluster0.sfigsmo.mongodb.net/shop'
   )
   .then(result => {
-    User.findOne().then(user=>{
-      if(!user){
+    User.findOne().then(user => {
+      if (!user) {
         const user = new User({
-          name:'shishupal',
-          email:'codeshishupal@gmail.com',
-          cart:{
-            items:[]
+          name: 'shishupal',
+          email: 'codeshishupal@gmail.com',
+          cart: {
+            items: []
           }
         });
         user.save();
       }
-    })
-    
+    });
     app.listen(3000);
   })
   .catch(err => {
