@@ -1,0 +1,13 @@
+what is cookie??
+
+Cookies are stored on the client side!
+User 
+|
+FRONTEND(VIEWS)
+
+
+REQUEST |
+                    Cookiew
+                       - Set via Response Header
+                       -
+SERVER(NODE APP) -------
