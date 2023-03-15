@@ -34,7 +34,7 @@ app.use(errorController.get404);
 
 mongoose
   .connect(
-    'mongodb+srv://codeshishupal:68zBKcghjZb5W4dA@cluster0.sfigsmo.mongodb.net/test'
+    'mongodb+srv://codeshishupal:68zBKcghjZb5W4dA@cluster0.sfigsmo.mongodb.net/shop'
   )
   .then(result => {
     app.listen(3000);
