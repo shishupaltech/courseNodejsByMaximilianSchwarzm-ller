@@ -1,1 +1,17 @@
 if you want ot learn about the mongoose then visit it's website.
+
+cookies 
+Great for storing data on the client (browser);
+Do not store sensitive data here! it can be viewed + manipulated 
+
+cookies can be configured to expire when the browser is closed(=> "Session Cookie") or when a certain age / expiry date is reached ("permanent cookies)
+.works well together with session.
+
+Session 
+. Stored on the server, Not on the client 
+
+. Great for storing sensitive data that should surive across requests 
+you can store anything in sessions often used for storing user data / authentication status 
+. Indetified via cookie(don't mistake this with the term "Session Cookie")
+
+you can use different storage for saving your sessions on the server.
